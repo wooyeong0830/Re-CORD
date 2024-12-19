@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo-lg';
+    src: url("image/BookkMyungjo_Light.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    cursor: url('image/mousebasic.png'), auto;
+}
+
+h1{
+    font-size: 16vw;
+    font-family: "adobe-garamond-pro", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 2vw;
+    padding-bottom: 0;
+    letter-spacing: 0.7vw;
+    /* 메인제목 */
+}
+
+h2{
+    font-size: 5vw;
+    font-family: "adobe-garamond-pro", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    padding-left: 4vw;
+    padding-right: 0vw;
+    padding-top: 0vw;
+    padding-bottom: 0;
+    transition: color 0.3s ease;
+    color: black;
+    /* 메인화면크레딧 */
+}
+
+h3{
+    font-size: 1.5vw;
+    font-family: "adobe-garamond-pro", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding-left: 6.5vw;
+    padding-right: 0vw;
+    padding-top: 0vw;
+    padding-bottom: 0;
+}
+
+h4{
+    font-size: 1.2vw;
+    font-family: 'BookkMyungjo-Bd';
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding-left: 6.5vw;
+    padding-right: 0vw;
+    padding-top: 4vw;
+    padding-bottom: 0;
+    line-height: 2.5vw;
+    letter-spacing: -0.02vw;
+    cursor: url('image/mousesearch.png'), auto;
+    /* 책제목 */
+}
+
+h5{
+    font-size: 1.2vw;
+    font-family: 'BookkMyungjo-Bd';
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    padding-top: 1.5vw;
+    padding-bottom: 0;
+    line-height: 2.5vw;
+    letter-spacing: -0.09vw;
+    cursor: url('image/mousepen.png'), auto;
+    /* 한글 인용구 */
+}
+
+h6{
+    font-size: 1vw;
+    font-family: 'BookkMyungjo-lg';
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding-left: 0vw;
+    padding-right: 0;
+    padding-top: 1.5vw;
+    padding-bottom: 0;
+    line-height: 1.8vw;
+    letter-spacing: -0.03vw;
+    /* 한글 의견 */
+}
+
+h7{
+    font-size: 6vw;
+    font-family: 'BookkMyungjo-Bd';
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding-left: 4vw;
+    padding-right: 0vw;
+    padding-top: 2vw;
+    padding-bottom: 6vw;
+    line-height: 0vw;
+    letter-spacing: 0vw;
+    /* 페이지 설명 */
+}
+
+
+
+
+.mainBackImage{
+    width: 100%;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 12vW;
+    margin: 0;
+    background-image: url(image/main.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 5px;
+}
+
+.mainBackImage h1 {
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+
+.Quotationback1{
+    height: 10vw;
+    padding: 0;
+    margin-top: 2.5vw;
+    margin-bottom: 0;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    background-image: url(image/line1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Quotationback2{
+    height: 10vw;
+    padding: 0;
+    margin-top: 2.5vw;
+    margin-bottom: 0;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    background-image: url(image/line2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.blank{
+    height: 5vw;
+}
+
+/* 이하로는 하이라이트 조건들 */
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.highlight::before {
+    content: "";
+    position: absolute;
+    margin-top: 1.5vw;
+    margin-left: 3vw;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 50%;
+    background-color: rgba(255, 255, 0, 0.3); 
+    z-index: 2;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out; 
+}
+
+
+.highlight.active::before {
+    transform: scaleX(1); 
+}
+
+.highlight2 {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.highlight2::before {
+    content: "";
+    position: absolute;
+    margin-top: 0vw;
+    margin-left: 3vw;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.3); 
+    z-index: 2;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.highlight2.active::before {
+    transform: scaleX(1); 
+}
+
+/* 이하로는 헤더 관련 조건들들 */
+
+.header {
+    background-color: #fff;
+    transition: all 0.5s ease; /* 부드러운 전환 효과 */
+    padding-left: 0;
+    padding-right: 0;
+    
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.5vw;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.row h3 {
+    font-size: 1.5vw;
+    font-family: "adobe-garamond-pro", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding-left: 6.5vw;
+    padding-right: 0vw;
+    padding-top: 2vw;
+    padding-bottom: 0;
+}
+
+/* 이하로는 동적 페이지 변경 조건들 */
+
+@media (max-width: 992px) { 
+    .col-12 h4 {
+        font-size: 2.5vw;
+        padding-left: 11vw;
+    }
+
+    .col-11 h5 {
+        font-size: 2vw;
+        padding-left: 5vw;
+        padding-right: 3.5vw;
+        padding-top: 3vw;
+        line-height: 4vw;
+    }
+
+    .col-11 h6 {
+        font-size: 1.4vw;
+    }
+
+    .col-11 .Quotationback1 {
+        height: 14vw;
+    }
+
+    .col-11 .Quotationback2 {
+        height: 14vw;
+    }
+
+    .col-11 .highlight::before{
+        margin-top: 2.5vw;
+        margin-left: 3vw;
+        width: 100%;
+        height: 50%;
+    }
+
+    .col-0 {
+        display: none; 
+    }
+}
